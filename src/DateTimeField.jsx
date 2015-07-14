@@ -105,6 +105,9 @@ DateTimeField = React.createClass({
     });
 
   },
+  getValue: function() {
+    return moment(this.state.inputValue, this.props.inputFormat, true).format(this.props.format);
+  },
   setSelectedDate: function(e) {
     var target = e.target;
     if (target.className && !target.className.match(/disabled/g)) {
@@ -341,8 +344,7 @@ DateTimeField = React.createClass({
                   setSelectedHour={this.setSelectedHour}
                   setSelectedMinute={this.setSelectedMinute}
                   togglePicker={this.togglePicker}
-                  togglePeriod={this.togglePeriod}
-            />
+                  togglePeriod={this.togglePeriod} />
             <div className="input-group date" ref="datetimepicker">
               <input type="text" className="form-control" onChange={this.onChange} value={this.state.inputValue} {...this.props.inputProps}/>
               <span className="input-group-addon" onClick={this.onClick} onBlur={this.onBlur} ref="dtpbutton"><Glyphicon glyph={this.state.buttonIcon} /></span>
