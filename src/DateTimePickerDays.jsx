@@ -4,6 +4,18 @@ React = require('react/addons');
 
 moment = require('moment');
 
+moment.locale('en', {
+  months : [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
+    "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ],
+
+  monthsShort : [
+    "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
+    "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+  ]
+});
+
 var classnames = require('classnames');
 
 DateTimePickerDays = React.createClass({
@@ -94,17 +106,17 @@ DateTimePickerDays = React.createClass({
             </tr>
 
             <tr>
-              <th className="dow">Su</th>
+              <th className="dow">Do</th>
 
-              <th className="dow">Mo</th>
+              <th className="dow">Se</th>
 
-              <th className="dow">Tu</th>
+              <th className="dow">Te</th>
 
-              <th className="dow">We</th>
+              <th className="dow">Qu</th>
 
-              <th className="dow">Th</th>
+              <th className="dow">Qu</th>
 
-              <th className="dow">Fr</th>
+              <th className="dow">Se</th>
 
               <th className="dow">Sa</th>
             </tr>
